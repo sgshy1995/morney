@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
+
+<script>
+  export default {
+    data(){
+      return{
+
+      }
+    },
+    methods:{
+      pushIn(){
+        this.$router.push({path:"/labels?defId=9009",query:{row:"123"}})
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
 #app {
